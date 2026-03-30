@@ -1,0 +1,134 @@
+:root {
+    --close-red: #ff6159;
+    --close-red-active: #bf4942;
+    --close-red-icon: #4d0000;
+    --close-red-icon-active: #190000;
+
+    --minimize-yellow: #ffbd2e;
+    --minimize-yellow-active: #bf8e22;
+    --minimize-yellow-icon: #995700;
+    --minimize-yellow-icon-active: #592800;
+
+    --maximize-green: #28c941;
+    --maximize-green-active: #1d9730;
+    --maximize-green-icon: #006500;
+    --maximize-green-icon-active: #003200;
+}
+
+traffic-lights {
+    display: inline-flex;
+    top: 1px;
+    left: 8px;
+}
+
+/* Default background colors – always colored */
+.traffic-light-close {
+    background-color: var(--close-red);
+}
+
+.traffic-light-minimize {
+    background-color: var(--minimize-yellow);
+}
+
+.traffic-light-maximize {
+    background-color: var(--maximize-green);
+}
+
+/* Darken on active hover (click feedback) */
+.traffic-light-close:active:hover {
+    background-color: var(--close-red-active);
+}
+
+.traffic-light-minimize:active:hover {
+    background-color: var(--minimize-yellow-active);
+}
+
+.traffic-light-maximize:active:hover {
+    background-color: var(--maximize-green-active);
+}
+
+.traffic-light {
+    border-radius: 100%;
+    padding: 0;
+    height: 12px;
+    width: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
+    margin-right: 3.5px;
+    position: relative;
+    outline: none;
+}
+
+/* Icons hidden by default */
+.traffic-light::before,
+.traffic-light::after {
+    content: '';
+    position: absolute;
+    border-radius: 1px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    visibility: hidden;
+}
+
+/* Show icons when hovering over the traffic-lights container */
+traffic-lights:hover>.traffic-light::before,
+traffic-lights:hover>.traffic-light::after {
+    visibility: visible;
+}
+
+/* Close button – X icon */
+.traffic-light-close::before,
+.traffic-light-close::after {
+    background-color: var(--close-red-icon);
+    width: 8px;
+    height: 1px;
+}
+
+.traffic-light-close::before {
+    transform: rotate(45deg);
+}
+
+.traffic-light-close::after {
+    transform: rotate(-45deg);
+}
+
+.traffic-light-close:active:hover::before,
+.traffic-light-close:active:hover::after {
+    background-color: var(--close-red-icon-active);
+}
+
+/* Minimize button – horizontal line */
+.traffic-light-minimize::before {
+    background-color: var(--minimize-yellow-icon);
+    width: 8px;
+    height: 1px;
+}
+
+.traffic-light-minimize:active:hover::before {
+    background-color: var(--minimize-yellow-icon-active);
+}
+
+/* Maximize button – square with diagonal line */
+.traffic-light-maximize::before {
+    background-color: var(--maximize-green-icon);
+    width: 6px;
+    height: 6px;
+}
+
+.traffic-light-maximize::after {
+    background-color: var(--maximize-green);
+    width: 10px;
+    height: 2px;
+    transform: rotate(45deg);
+}
+
+.traffic-light-maximize:active:hover::before {
+    background-color: var(--maximize-green-icon-active);
+}
+
+.traffic-light-maximize:active:hover::after {
+    background-color: var(--maximize-green-active);
+}
