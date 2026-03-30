@@ -1,0 +1,24 @@
+article {
+    color: rgb(114, 149, 105);
+    margin-top: 0px;
+    margin-bottom: 50px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    font-size: 1.8em;
+}
+
+h1 {
+    color: rgb(114, 149, 105);
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+body {
+    background-color: rgb(194, 211, 200);
+}
