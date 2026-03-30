@@ -33,13 +33,14 @@ h2 {
 
 article {
     color: rgb(114, 141, 105);
-    margin-top: 0px; 
+    margin-top: 0px;
     margin-bottom: 50px;
     text-align: center;
     background-color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
     position: fixed;
-    top: 80px;  /* move up by decreasing */
+    top: 80px;
+    /* move up by decreasing */
     left: 50%;
     transform: translateX(-50%);
 }
@@ -52,6 +53,7 @@ h3 {
     left: 1150px;
     font-size: 3em;
 }
+
 .menu-icon {
     position: fixed;
     top: 10px;
