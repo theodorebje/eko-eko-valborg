@@ -137,65 +137,6 @@ main {
     }
 }
 
-.state {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
-
-figure {
-    display: grid;
-    grid-template-rows: auto 1fr;
-    border: 1px solid var(--accent);
-    background: var(--card-bg);
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 0 0 1.5rem;
-
-    >traffic-lights {
-        grid-row: 1;
-        grid-column: 1;
-        display: flex;
-        align-items: center;
-        padding-block: 0.6rem;
-        width: fit-content;
-        padding-inline: 1rem;
-        flex-shrink: 0;
-    }
-
-    >figcaption {
-        grid-row: 1;
-        grid-column: 1;
-        text-align: center;
-        align-self: center;
-        font-size: 0.9rem;
-        font-weight: 300;
-        font-style: italic;
-        color: var(--muted);
-    }
-
-    >img {
-        grid-row: 2;
-        width: 100%;
-        border-top: 1px solid var(--accent);
-        display: block;
-    }
-
-    &:has(#minimize-state:checked)>img {
-        display: none;
-    }
-
-    &:has(#close-state:checked) {
-        display: none;
-    }
-}
-
-
 a {
     color: var(--link);
     transition: color 0.25s ease-out;
