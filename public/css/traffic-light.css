@@ -49,6 +49,7 @@ traffic-lights {
 
 .traffic-light {
     border-radius: 100%;
+    cursor: pointer;
     padding: 0;
     height: 12px;
     width: 12px;
