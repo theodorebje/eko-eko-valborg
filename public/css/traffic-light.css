@@ -13,6 +13,19 @@
     --maximize-green-active: #1d9730;
     --maximize-green-icon: #006500;
     --maximize-green-icon-active: #003200;
+
+    --focus: #0066ff;
+}
+
+.state {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
 traffic-lights {
@@ -57,7 +70,6 @@ traffic-lights {
     box-sizing: border-box;
     margin-right: 3.5px;
     position: relative;
-    outline: none;
 }
 
 /* Icons hidden by default */
@@ -75,8 +87,8 @@ traffic-lights {
 }
 
 /* Show icons when hovering over the traffic-lights container */
-traffic-lights:hover>.traffic-light::before,
-traffic-lights:hover>.traffic-light::after {
+traffic-lights:hover > .traffic-light::before,
+traffic-lights:hover > .traffic-light::after {
     visibility: visible;
 }
 
@@ -132,4 +144,23 @@ traffic-lights:hover>.traffic-light::after {
 
 .traffic-light-maximize:active:hover::after {
     background-color: var(--maximize-green-active);
+}
+
+.state:focus {
+    outline: none;
+}
+
+traffic-lights:focus-within .traffic-light::before,
+traffic-lights:focus-within .traffic-light::after {
+    visibility: visible;
+}
+
+.traffic-light:focus-within {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+}
+
+.traffic-light-maximize:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
 }
