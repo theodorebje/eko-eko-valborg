@@ -154,9 +154,8 @@ figure {
     >figcaption {
         grid-row: 1;
         grid-column: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        text-align: center;
+        align-self: center;
         font-size: 0.9rem;
         font-weight: 300;
         font-style: italic;
