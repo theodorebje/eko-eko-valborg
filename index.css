@@ -129,6 +129,7 @@ main {
 }
 
 figure {
+    position: relative;
     border: 1px solid var(--accent);
     background: var(--card-bg);
     border-radius: 10px;
@@ -140,34 +141,42 @@ figure {
         align-items: center;
         padding-block: 0.6rem;
         padding-inline: 1rem;
-        font-size: 0.9rem;
-        color: var(--muted);
+        position: relative;
 
         >traffic-lights {
             flex-shrink: 0;
         }
-
-        >figcaption {
-            flex: 1;
-            font-weight: 300;
-            text-align: center;
-            font-style: italic;
-            display: inline-block;
-        }
     }
 
-    title-bar:has(#minimize-state:checked)+img {
+    >figcaption {
+        position: absolute;
+        --height: 1.95rem;
+        top: calc(var(--height) / 2);
+        text-align: center;
+        transform: translate(-50%, -50%);
+        display: block;
+        z-index: 999;
+        left: 50%;
+        font-weight: 300;
+        font-style: italic;
+        color: var(--muted);
+        font-size: 0.9rem;
+    }
+
+    >img {
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+        border-top: 1px solid var(--accent);
+        display: block;
+    }
+
+    &:has(#minimize-state:checked)>img {
         display: none;
     }
 
     &:has(#close-state:checked) {
         display: none;
-    }
-
-    >img {
-        width: 100%;
-        border-top: 1px solid var(--accent);
-        display: block;
     }
 }
 
