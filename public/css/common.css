@@ -25,7 +25,7 @@ body {
     background-color: var(--bg);
     color: var(--text);
     font-family: sans-serif;
-    min-height: 100dvh;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
 }
