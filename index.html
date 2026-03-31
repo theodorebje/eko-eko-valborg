@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="public/css/traffic-light.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Momo+Signature&display=swap">
-    <link rel="icon" href="public/img/logo.svg" />
+    <link rel="icon" href="public/img/logo.svg">
 </head>
 
 <body>
@@ -32,8 +32,12 @@
         <figure>
             <figcaption>Valborgsfirande i Ekoparken, <time datetime="2023-04-30">2023</time></figcaption>
             <traffic-lights>
-                <label title="Stäng" aria-label="Stäng" class="traffic-light traffic-light-close" id="close"><input type="checkbox" class="state" id="close-state" /></label>
-                <label title="Minimera" aria-label="Minimera" class="traffic-light traffic-light-minimize" id="minimize"><input type="checkbox" class="state" id="minimize-state" /></label>
+                <label title="Stäng" class="traffic-light traffic-light-close" id="close">
+                    <input type="checkbox" aria-label="Stäng" class="state" id="close-state">
+                </label>
+                <label title="Minimera" class="traffic-light traffic-light-minimize" id="minimize">
+                    <input type="checkbox" aria-label="Minimera" class="state" id="minimize-state">
+                </label>
                 <a title="Maximera" aria-label="Maximera" href="public/img/Ekopark.jpg" class="traffic-light traffic-light-maximize" id="maximize"></a>
             </traffic-lights>
             <img src="public/img/Ekopark.jpg" alt="Valborgsfirande i Ekoparken">
