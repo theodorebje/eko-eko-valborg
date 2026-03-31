@@ -1,3 +1,12 @@
+/*
+ * macOS-style Traffic lights
+ *
+ * Original version by Adam Drago (@atdrago on GitHub)
+ * https://codepen.io/atdrago/pen/yezrBR
+ *
+ * Modified by me to add focus styles and remove unfocused styles
+ * */
+
 :root {
     --close-red: #ff6159;
     --close-red-active: #bf4942;
@@ -34,7 +43,6 @@ traffic-lights {
     left: 8px;
 }
 
-/* Default background colors – always colored */
 .traffic-light-close {
     background-color: var(--close-red);
 }
@@ -72,7 +80,6 @@ traffic-lights {
     position: relative;
 }
 
-/* Icons hidden by default */
 .traffic-light::before,
 .traffic-light::after {
     content: '';
@@ -86,13 +93,11 @@ traffic-lights {
     visibility: hidden;
 }
 
-/* Show icons when hovering over the traffic-lights container */
 traffic-lights:hover > .traffic-light::before,
 traffic-lights:hover > .traffic-light::after {
     visibility: visible;
 }
 
-/* Close button – X icon */
 .traffic-light-close::before,
 .traffic-light-close::after {
     background-color: var(--close-red-icon);
@@ -124,7 +129,6 @@ traffic-lights:hover > .traffic-light::after {
     background-color: var(--minimize-yellow-icon-active);
 }
 
-/* Maximize button – square with diagonal line */
 .traffic-light-maximize::before {
     background-color: var(--maximize-green-icon);
     width: 6px;
