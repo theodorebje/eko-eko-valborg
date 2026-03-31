@@ -20,12 +20,17 @@ figure {
 
     >traffic-lights {
         grid-row: 1;
+        background: var(--card-bg);
+        background: linear-gradient(90deg,
+                var(--card-bg) 75%,
+                color-mix(in srgb, var(--card-bg), transparent 100%) 100%);
         grid-column: 1;
         display: flex;
         align-items: center;
         padding-block: 0.6rem;
         width: fit-content;
         padding-inline: 1rem;
+        padding-right: 2rem;
         flex-shrink: 0;
     }
 
@@ -55,4 +60,3 @@ figure {
         display: none;
     }
 }
-

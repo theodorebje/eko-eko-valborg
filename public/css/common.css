@@ -45,6 +45,7 @@ header {
 
     >span {
         font-size: 70cqh;
+        text-align: center;
         display: flex;
         font-weight: 600;
         color: var(--heading);
